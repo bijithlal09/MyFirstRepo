@@ -15,12 +15,12 @@ pool:
 resources:
   pipelines:
   - pipeline: Trigger-Target
-    source: Trigger-Source1
+    source: Trigger-Source2
     trigger: true
     
     
   - pipeline: Trigger-Target
-    source: Trigger-Source2
+    source: Trigger-Source1
     trigger: true
       
 
