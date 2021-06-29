@@ -20,10 +20,8 @@ resources:
     
   - pipeline: Trigger-Target
     source: Trigger-Source2
-    trigger:
-      branches:
-         include:
-          - azure-pipelinesTS2
+    trigger: true
+      
 
   - pipeline: Trigger-Target
     source: Trigger-Source3
