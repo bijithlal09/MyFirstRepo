@@ -15,7 +15,7 @@ pool:
 resources:
   pipelines:
   - pipeline: Trigger-Target
-    source: 'Trigger-Source2,Trigger-Source1'
+    source: Trigger-Source2
     trigger: true
     
     
