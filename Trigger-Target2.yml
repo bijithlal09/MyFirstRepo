@@ -16,15 +16,17 @@ resources:
   pipelines:
   - pipeline: Trigger-Target
     source: Trigger-Source2
+#    project: 'Sample YAML CICD'
     trigger: true
     
     
-  - pipeline: Trigger-Target
+  - pipeline: Trigger-Target1
     source: Trigger-Source1
+#    project: 'Sample YAML CICD'
     trigger: true
       
 
-  - pipeline: Trigger-Target
+  - pipeline: Trigger-Target2
     source: Trigger-Source3
     trigger:
       branches:
