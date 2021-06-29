@@ -1,0 +1,45 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+# this is being defined in app-ci pipeline
+trigger: none
+
+pool:
+  vmImage: ubuntu-latest
+
+
+
+# this is being defined in app-ci pipeline
+resources:
+  pipelines:
+  - pipeline: Trigger-Target
+    source: Trigger-Source1
+    trigger: true
+    
+  - pipeline: Trigger-Target
+    source: Trigger-Source2
+    trigger:
+      branches:
+         include:
+          - azure-pipelinesTS2
+
+  - pipeline: Trigger-Target
+    source: Trigger-Source3
+    trigger:
+      branches:
+         include:
+          - azure-pipelinesTS2
+
+
+
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
